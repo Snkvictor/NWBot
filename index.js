@@ -1,12 +1,13 @@
 const fs = require('fs');
 const { Client, Collection, Intents } = require('discord.js');
-const express = require('express');
+/*	const express = require('express');
 const path = require('path');
 const PORT = process.env.PORT || 5000;
 
 express()
 	.use(express.static(path.join(__dirname, 'public')))
-	.listen(PORT, () => console.log(`Listening on ${ PORT }`));
+	.listen(PORT, () => console.log(`Listening on ${ PORT }`));  */
+
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
 client.commands = new Collection();
