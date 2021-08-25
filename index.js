@@ -1,6 +1,5 @@
 const fs = require('fs');
 const { Client, Collection, Intents } = require('discord.js');
-const { token } = require('./config.json');
 const express = require('express');
 const path = require('path');
 const PORT = process.env.PORT || 5000;
@@ -46,4 +45,4 @@ client.on('interactionCreate', async interaction => {
 	}
 });
 
-client.login(token);
+client.login(process.env.DJS_TOKEN);
