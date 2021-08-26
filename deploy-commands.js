@@ -1,9 +1,9 @@
 const fs = require('fs');
 const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord-api-types/v9');
-const { token } = require('./config.json') || process.env.DJS_TOKEN;
-const { clientId } = require('./config.json') || process.env.CLIENTID;
-const { guildId } = require('./config.json') || process.env.CLIENTID;
+const { token } = process.env.DJS_TOKEN || require('./config.json');
+const { clientId } = process.env.CLIENTID || require('./config.json');
+const { guildId } = process.env.GUILDID || require('./config.json');
 
 
 const commands = [];
