@@ -15,7 +15,7 @@ const rest = new REST({ version: '9' }).setToken(process.env.DJS_TOKEN);
 (async () => {
 	try {
 		await rest.put(
-			Routes.applicationGuildCommands(),
+			Routes.applicationGuildCommands(process.env.CLIENTID),
 			{ body: commands },
 		);
 
